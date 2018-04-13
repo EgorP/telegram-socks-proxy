@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+  danted:
+    image: danted
+    build: .
+    restart: always
+    network_mode: "bridge"
+    ports:
+    - '1080:1080'

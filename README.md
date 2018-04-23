@@ -4,7 +4,7 @@
 
 Telegram умеет использовать socks5 проксирование на уровне приложения. На мой взгляд это удобнее чем VPN. При настройке VPN у вас обычно (если не плясать с бубном) весь ваш трафик начинает идти через VPN-сервер. Это неудобно, медленно и избыточно.
 
-Результатом данной инструкции будет ссылка вида ```https://t.me/socks?server=167.99.39.89&port=1080&user=proxy&pass=MyLongPass123``` . Её достаточно открыть в любом приложении Telegram, чтобы оно снова заработал. Полученную ссылку можно переслать друзьям и родственникам.
+Результатом данной инструкции будет ссылка вида ```tg://socks?server=167.99.39.89&port=1080&user=proxy&pass=MyLongPass123``` . Её достаточно открыть в любом приложении Telegram, чтобы оно снова заработал. Полученную ссылку можно переслать друзьям и родственникам.
 
 
 
@@ -111,6 +111,7 @@ ssh root@167.99.39.89
 ~~~
 git clone https://github.com/EgorP/telegram-socks-proxy.git && \
     cd telegram-socks-proxy/ && \
+    docker-compose build && \
     docker-compose up -d
 ~~~
 
@@ -122,7 +123,7 @@ git clone https://github.com/EgorP/telegram-socks-proxy.git && \
 ==========
 Paste in telegram and click link below:
 
-https://t.me/socks?server=167.99.39.89&port=1080&user=proxy&pass=MyLongPass123
+tg://socks?server=167.99.39.89&port=1080&user=proxy&pass=MyLongPass123
 
 ==========
 ~~~
